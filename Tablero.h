@@ -9,8 +9,8 @@ public:
 	bool get_jterminado();
 	Tablero();
 private:
-	char tablero[3][3];				//atributos de la clase
-	bool jterminado = false;
+	char tablero[3][3];				//atributos de la clase. Mapa del tablero
+	bool jterminado = false;		//booleano para terminar el juego cuando hay un ganador
 	
 	
 };

@@ -1,7 +1,7 @@
 #include "Ficha.h"
 #include <conio.h>
 
-Ficha::Ficha() 
+Ficha::Ficha() 				//constructor vacio
 {
 	
 }
@@ -107,7 +107,7 @@ void Ficha::elegir_pos()			//metodo para agregar las fichas al tablero por acció
 	}
 }
 
-int Ficha::get_posicionX ()
+int Ficha::get_posicionX ()				//metodos get para obtener las posiciones x e y donde se quiere colocar la ficha
 {
 	return posicionX;
 }

@@ -2,7 +2,7 @@
 #include "Tablero.h"
 using namespace std;
 
-Tablero::Tablero() 
+Tablero::Tablero() 									//con el constructor se inicia el tablero vacio
 {
 	for (int i = 0 ; i < 3 ; i++)
 	{
@@ -128,7 +128,7 @@ void Tablero::ganador()									//metodo que tiene la logica para verificar si h
 	}
 }
 
-bool Tablero::get_jterminado()
+bool Tablero::get_jterminado()		//metodo get para obtener el bool de juego terminado, este se vuelve true cuando hay un ganador
 {
 	return jterminado;
 }

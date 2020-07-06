@@ -3,10 +3,10 @@
 
 class Ficha {
 public:
-	void elegir_pos ();	
-	int get_posicionX ();
+	void elegir_pos ();			//metodo para agregar las fichas al tablero por acción de teclado
+	int get_posicionX ();		//metodos get para obtener las posiciones x e y donde se quiere colocar la ficha
 	int get_posicionY ();
-	Ficha();
+	Ficha();					//constructor
 private:
 	int posicionX;				//atributos de posición, a partir de presionar una tecla de numero se generaran ambos valores (posicion X e Y)
 	int posicionY;
