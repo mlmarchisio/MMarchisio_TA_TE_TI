@@ -9,7 +9,7 @@ int main (int argc, char *argv[]) {			//función principal
 	
 	Juego J1;								//se crea el objeto J1
 	J1.mostrar_instrucciones();				//se usa el metodo que muetra las instrucciones del juego
-	J1.jugar();								//se usa el método que permite jugar
+	J1.jugar();								//se usa el método que permite jugar9
 	
 	return 0;
 }
