@@ -1,45 +1,21 @@
-
 #ifndef JUEGO_H
 #define JUEGO_H
-
 #include "Tablero.h"
-
+#include "Ficha.h"
 
 class Juego {
-	
-	char jugador1;
-	char jugador2;
-	Tablero miTablero;
-	
-	// posiciona una ficha
-	void setFichaIn(int x, int y, char c);
-	// imprime pantalla, llama a los otros metodos de imprimir
-	void imprmirPantalla(bool turno1, bool opciones=true);
-	// imprime opciones
-	void imprimirOpciones(bool opciones=true);
-	// imprime tablero
-	void imprimirTablero();
-	// evento de tecla
-	int getKey();
-	// imprime una tecla en el tablero
-	void insertKey(int k,char c);
-	// verifica que se haya formado tateti
-	bool checkTateti();
-	// verifica que haya terminado por tablero completo
-	bool checkTermino();
-	// imprime ganador
-	void imprimirGanador(bool);
-	// imprime juego finalizado
-	void imprimirTerminar(bool);
-	// imprime cabecera
-	void imprimirCabecera();
-	
 public:
-	Juego();
-	void play();
-
-	
+	Juego();						//constructor
+	void mostrar_instrucciones();	//metodo creado para mostrar las instrucciones del juego
+	void jugar();					//metodo que controla el juego
+		
 private:
+	int contador_fichas;	//un contador de fichas agregadas, lo usamos para terminar el juego cuando el tablero se llenó de fichas y no hay ganador
+	bool game_over;			//booleano para controlar el while donde se encuentra el juego
+	int array [3][3];		//arreglo para mostrar que tecla numerica corresponde a cada posición dentro del tablero, se usa en las instrucciones del juego
+	Tablero T1;				//obejto tablero T1
+	Ficha FicX;				//objeto de ficha FicX
+	
 };
 
 #endif
