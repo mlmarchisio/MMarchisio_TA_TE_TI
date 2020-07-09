@@ -70,6 +70,7 @@ void Juego::jugar()											//metodo que controla el juego
 		cout<<"Elije una posicion donde colocar tu ficha X"<<endl;
 		FicX.elegir_pos();											//se utiliza el metodo elegir_pos de la clase Ficha para seleccionar una posición donde colocar la ficha X
 		T1.set_tablero (FicX.get_posicionX() , FicX.get_posicionY() , 'X');		//se coloca la ficha en el tablero, se pasan la posición y el tipo de ficha que se coloca
+		textcolor (14);
 		T1.mostrar_tab();											//se muesra el tablero con la/s fichaa/s depositada/s en el tablero
 		T1.ganador();												//se llama al metodo que verifica si hay ganador
 		game_over = T1.get_jterminado();							//si hay ganador el juego termina, el booleano jterminado se vuelve true y se accede a el mediante el get de la clase Tablero
@@ -85,6 +86,7 @@ void Juego::jugar()											//metodo que controla el juego
 			cout<<"Elije una posicion donde colocar tu ficha O"<<endl;
 			FicX.elegir_pos();											// se repite lo mismo que para el jugador 1, solo se cambia el tipo de ficha de X a O
 			T1.set_tablero (FicX.get_posicionX() , FicX.get_posicionY() , 'O');
+			textcolor (14);
 			T1.mostrar_tab();
 			T1.ganador();
 			game_over = T1.get_jterminado();
