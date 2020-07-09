@@ -1,5 +1,6 @@
 #include "Juego.h"
 #include <iostream>
+#include <conio2.h>
 using namespace std;
 
 Juego::Juego() 								//constructor
@@ -22,16 +23,20 @@ Juego::Juego() 								//constructor
 
 void Juego::mostrar_instrucciones()
 {
+	textcolor (14);
 	cout<<"TA TE TI"<<endl<<endl;			//titulo del juego
+	textcolor(15);
 	cout<<"El jugador 1 juega con las fichas X."<<endl;				//aca inician las indicaciones de como jugar
 	cout<<"El jugador 2 juega con las fichas O."<<endl<<endl;
 	cout<<"Mediante el teclado numerico se introducen las fichas en el tablero."<<endl<<endl;
+	textcolor (14);
 	cout<<"Tecla 7 => pocision A1		Tecla 8 => pocision B1		Tecla 9 => pocision C1"<<endl;
 	cout<<"Tecla 4 => pocision A2		Tecla 5 => pocision B2		Tecla 6 => pocision C2"<<endl;
 	cout<<"Tecla 1 => pocision A3		Tecla 2 => pocision B3		Tecla 3 => pocision C3"<<endl<<endl;
+	textcolor (15);
 	cout<<"A continuacion se muestra el tablero de juego donde se informa la tecla numerica a usar para introducir la ficha:"<<endl<<endl;
 	
-	
+	textcolor (14);
 	
 	cout<<"      A     B     C   "<<endl;		// se muestra el arreglo con las coordenadas, esto muestra el tablero con lo numeros correspondientes a cada tecla y su ubicación
 	cout<<"   -------------------"<<endl;
@@ -60,6 +65,7 @@ void Juego::jugar()											//metodo que controla el juego
 		//juega jugador 1
 		
 		cout<<endl;
+		textcolor(contador_fichas+1);
 		cout<<"Juega el jugador 1 (X)"<<endl;
 		cout<<"Elije una posicion donde colocar tu ficha X"<<endl;
 		FicX.elegir_pos();											//se utiliza el metodo elegir_pos de la clase Ficha para seleccionar una posición donde colocar la ficha X
@@ -74,6 +80,7 @@ void Juego::jugar()											//metodo que controla el juego
 		if (game_over == false && contador_fichas < 9)				//este if evita que el jugador 2 siga jugando una vez terminada la partida
 		{
 			cout<<endl;
+			textcolor(contador_fichas+1);
 			cout<<"Juega el jugador 2 (O)"<<endl;
 			cout<<"Elije una posicion donde colocar tu ficha O"<<endl;
 			FicX.elegir_pos();											// se repite lo mismo que para el jugador 1, solo se cambia el tipo de ficha de X a O
@@ -88,6 +95,7 @@ void Juego::jugar()											//metodo que controla el juego
 	if (contador_fichas == 9 && T1.get_jterminado() == false)				//mensaje que se ejecuta cuando no hay ganador, es decir, se colocaron todas las fichas
 	{																		//y no hay ta te ti
 		cout<<endl;
+		textcolor (contador_fichas+1);
 		cout<<"Juego terminado, no hay ganador."<<endl;
 	}
 }
